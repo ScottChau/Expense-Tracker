@@ -1,0 +1,11 @@
+.display_section {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.display_section strong {
+  text-align: center;
+  border: 2px black solid;
+  padding: 10px;
+}
