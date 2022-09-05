@@ -1,3 +1,47 @@
+h1,
+h3 {
+  text-align: center;
+}
+
+#form {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr 1fr;
+  grid-gap: 20px;
+  text-align: end;
+  width: 800px;
+  margin: 0 auto;
+}
+
+#label-name {
+  display: flex;
+
+  grid-column: 1/2;
+}
+
+#name {
+  grid-column: 2/5;
+}
+
+#label-date {
+  grid-column: 1/2;
+}
+
+#date {
+  grid-column: 2/3;
+}
+
+#label-amount {
+  grid-column: 3/4;
+}
+
+#amount {
+  grid-column: 4/5;
+}
+
+#submit {
+  grid-column: 2/5;
+}
+
 .input_section {
   margin-bottom: 50px;
 }

@@ -41,6 +41,8 @@ form.addEventListener("submit", (e) => {
 
   newDiv.append(item, dateCopy, amt, deleteBtn);
   newDiv.classList.add("section");
-
   container.appendChild(newDiv);
+  name.value = "";
+  date.value = "";
+  amount.value = "";
 });
