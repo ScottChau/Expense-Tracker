@@ -1,11 +1,40 @@
+.input_section {
+  margin-bottom: 50px;
+}
+
+.container p {
+  margin: 0;
+  height: 30px;
+  background-color: lightgrey;
+}
+
 .display_section {
-  margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
 
 .display_section strong {
   text-align: center;
-  border: 2px black solid;
+  margin-left: -1px;
+  border: 1px solid rgba(5, 5, 5, 0.5);
   padding: 10px;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: lightgrey;
+  border: 1px solid rgba(5, 5, 5, 0.5);
+}
+
+.section p {
+  margin: 0;
+  text-align: center;
+  border-right: 1px solid rgba(5, 5, 5, 0.5);
+  padding: 10px;
+}
+
+.section button {
+  width: 50px;
+  margin: 0 auto;
 }

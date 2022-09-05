@@ -4,8 +4,24 @@ const amount = document.getElementById("amount");
 const form = document.getElementById("form");
 const container = document.querySelector(".container");
 
+let p = null;
+
+function noItem() {
+  p = document.createElement("p");
+  p.appendChild(document.createTextNode("No expenses added yet!"));
+  container.appendChild(p);
+}
+
+noItem();
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+
+  if (p) {
+    container.removeChild(p);
+    p = null;
+  }
+
   const newDiv = document.createElement("div");
 
   const item = document.createElement("p");
@@ -19,10 +35,12 @@ form.addEventListener("submit", (e) => {
   deleteBtn.innerHTML = "X";
   deleteBtn.addEventListener("click", () => {
     container.removeChild(newDiv);
+
+    if (document.querySelector(".section") === null) noItem();
   });
 
   newDiv.append(item, dateCopy, amt, deleteBtn);
-  newDiv.classList.add("display_section");
+  newDiv.classList.add("section");
 
   container.appendChild(newDiv);
 });
